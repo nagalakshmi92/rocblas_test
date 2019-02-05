@@ -1,0 +1,3 @@
+[submodule "ROCm_Libraries/rocBLAS"]
+	path = ROCm_Libraries/rocBLAS
+	url = https://github.com/ROCmSoftwarePlatform/rocBLAS.git
