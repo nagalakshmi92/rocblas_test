@@ -271,6 +271,7 @@ following GitHub repositories:
 .. _ROCr Debug Agent: https://github.com/ROCm-Developer-Tools/rocr_debug_agent/tree/roc-2.1.0
 .. _ROCm Code Object Manager: https://github.com/RadeonOpenCompute/ROCm-CompilerSupport/tree/roc-2.1.0
 .. _ROC Profiler: https://github.com/ROCm-Developer-Tools/rocprofiler/tree/roc-2.1.0
+.. _ROC Tracer: https://github.com/ROCm-Developer-Tools/roctracer/tree/roc-2.1.x
 .. _Radeon Compute Profiler: https://github.com/GPUOpen-Tools/RCP/tree/v5.6
 .. _HCC Examples: https://github.com/ROCm-Developer-Tools/HCC-Example-Application/tree/ffd65333
 .. _HIP Examples: https://github.com/ROCm-Developer-Tools/HIP-Examples/tree/roc-2.1.x
@@ -418,7 +419,7 @@ The packages for each of the major ROCm components are:
    -  ROCm SMI Lib: ``rocm_smi_lib64``
    -  RCCL: ``rccl``
    -  MIVisionX: ``mivisionx``
-   -  CUB HIP: `cub-hip`
+   -  CUB HIP: ``cub-hip``
 
 To make it easier to install ROCm, the AMD binary repos provide a number
 of meta-packages that will automatically install multiple other
