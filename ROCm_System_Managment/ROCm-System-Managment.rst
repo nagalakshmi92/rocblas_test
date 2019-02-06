@@ -37,16 +37,16 @@ AMD ROCm System Management Interface
 
 optional arguments:
 
-====================== ========================================================================
-  -h, --help                  show this help message and exit
-  --load FILE                 Load Clock, Fan, Performance and Profile settings from FILE
-  --save FILE                 Save Clock, Fan, Performance and Profile settings to FILE
-====================== ========================================================================
+=================================== ===================================================================================
+  -h, --help                  		show this help message and exit
+  --load FILE                 		Load Clock, Fan, Performance and Profile settings from FILE
+  --save FILE                 		Save Clock, Fan, Performance and Profile settings to FILE
+=================================== ===================================================================================
 
 
- -d DEVICE, --device DEVICE  Execute command on specified device
+ -d DEVICE, --device DEVICE  		Execute command on specified device
 
-============================= 		========================================================================
+=================================== ===================================================================================
   -i, --showid                		Show GPU ID
   -v, --showvbios             		Show VBIOS version
   --showhw                    		Show Hardware details
@@ -88,13 +88,13 @@ optional arguments:
   --loglevel ILEVEL                 	How much output will be printed for what program is doing, one of
                                     	debug/info/warning/error/critical
 
-============================= 		========================================================================
+=================================== ===================================================================================
 
 **Detailed Option Descriptions**
 
 **--setsclk/--setmclk # [# # ...]:**  This allows you to set a mask for the levels. For example, if a GPU has 8 clock levels, you can set a mask to use levels 0, 5, 6 and 7 with --setsclk 0 5 6 7 . This will only use the base level, and the top 3 clock levels. This will allow you to keep the GPU at base level when there is no GPU load, and the top 3 levels when the GPU load increases.
 
-.. NOTE::
+.. NOTES::
     The clock levels will change dynamically based on GPU load based on the default Compute and Graphics profiles. The thresholds and 	      	  delays for a custom mask cannot be controlled through the SMI tool
 
     This flag automatically sets the Performance Level to "manual" as the mask is not
