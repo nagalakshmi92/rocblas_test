@@ -44,7 +44,7 @@ optional arguments:
 =================================== ===================================================================================
 
 
- -d DEVICE, --device DEVICE  		Execute command on specified device
+ -d DEVICE, --device DEVICE  	   Execute command on specified device
 
 =================================== ===================================================================================
   -i, --showid                		Show GPU ID
@@ -95,15 +95,19 @@ optional arguments:
 **--setsclk/--setmclk # [# # ...]:**  This allows you to set a mask for the levels. For example, if a GPU has 8 clock levels, you can set a mask to use levels 0, 5, 6 and 7 with --setsclk 0 5 6 7 . This will only use the base level, and the top 3 clock levels. This will allow you to keep the GPU at base level when there is no GPU load, and the top 3 levels when the GPU load increases.
 
 .. NOTES::
-    The clock levels will change dynamically based on GPU load based on the default Compute and Graphics profiles. The thresholds and 	      	  delays for a custom mask cannot be controlled through the SMI tool
+    The clock levels will change dynamically based on GPU load based on the default
+    Compute and Graphics profiles. The thresholds and delays for a custom mask cannot
+    be controlled through the SMI tool
 
     This flag automatically sets the Performance Level to "manual" as the mask is not
     applied when the Performance level is set to auto
 
 **--setfan LEVEL:** This sets the fan speed to a value ranging from 0 to 255 (not from 0-100%).
 If the level ends with a %, the fan speed is calculated as pct*maxlevel/100 (maxlevel is usually 255, but is determined by the ASIC)
-.. NOTE:: 
-	While the hardware is usually capable of overriding this value when required, it is recommended to not set the fan level 	 lower than the default value for extended periods of time
+.. NOTE::
+    While the hardware is usually capable of overriding this value when required, it is
+    recommended to not set the fan level lower than the default value for extended periods
+    of time
 
 **--setperflevel LEVEL:** This lets you use the pre-defined Performance Level values, which can include: auto (Automatically change       	PowerPlay values based on GPU workload low (Keep PowerPlay values low, regardless of workload) high (Keep PowerPlay values high,    	regardless of workload) manual (Only use values defined in sysfs values)
 
@@ -122,7 +126,6 @@ If the level ends with a %, the fan speed is calculated as pct*maxlevel/100 (max
 .. NOTES::
     Operating the GPU outside of specifications can cause irreparable damage to your hardware
     Please observe the warning displayed when using this option
-
 
 **--setprofile SETPROFILE:** The Compute Profile accepts 1 or n parameters, either the Profile to select (see --showprofile for a list of preset Power Profiles) or a quoted string of values for the CUSTOM profile. NOTE: These values can vary based on the ASIC, and may include: SCLK_PROFILE_ENABLE - Whether or not to apply the 3 following SCLK settings (0=disable,1=enable) NOTE: This is a hidden field. If set to 0, the following 3 values are displayed as '-' SCLK_UP_HYST - Delay before sclk is increased (in milliseconds) SCLK_DOWN_HYST - Delay before sclk is decresed (in milliseconds) SCLK_ACTIVE_LEVEL - Workload required before sclk levels change (in %) MCLK_PROFILE_ENABLE - Whether or not to apply the 3 following MCLK settings (0=disable,1=enable) NOTE: This is a hidden field. If set to 0, the following 3 values are displayed as '-' MCLK_UP_HYST - Delay before mclk is increased (in milliseconds) MCLK_DOWN_HYST - Delay before mclk is decresed (in milliseconds) MCLK_ACTIVE_LEVEL - Workload required before mclk levels change (in %)
 
