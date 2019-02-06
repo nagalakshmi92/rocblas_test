@@ -5,6 +5,24 @@
 Current Release Notes
 =====================
 
+New features and enhancements in ROCm 2.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+RocTracer v1.0 preview release – 'rocprof' HSA runtime tracing and statistics support - 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+Supports HSA API tracing and HSA asynchronous GPU activity including kernels execution and memory copy
+
+Improvements to ROCM-SMI tool -
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Added support to show real-time PCIe bandwidth usage via the -b/--showbw flag
+
+DGEMM Optimizations -
+^^^^^^^^^^^^^^^^^^^^^^
+
+Improved DGEMM performance for large square and reduced matrix sizes (k=384, k=256)
+
+
 New features and enhancements in ROCm 2.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
